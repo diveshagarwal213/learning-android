@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -17,9 +18,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val viewModel: CounterViewModel by viewModels()
             MyFirstAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ShoppingListApp(modifier = Modifier.padding(innerPadding))
+                    CounterApp(modifier = Modifier.padding(innerPadding), viewModel = viewModel)
                 }
             }
         }
@@ -31,6 +33,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun UnitConverterPreview() {
     MyFirstAppTheme {
-        ShoppingListApp()
+//        CounterApp()
     }
 }
