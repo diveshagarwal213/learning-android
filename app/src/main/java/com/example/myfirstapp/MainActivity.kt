@@ -18,10 +18,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val viewModel: CounterViewModel by viewModels()
             MyFirstAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CounterApp(modifier = Modifier.padding(innerPadding), viewModel = viewModel)
+                    RecipeScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -29,10 +28,10 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun UnitConverterPreview() {
-    MyFirstAppTheme {
-//        CounterApp()
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun UnitConverterPreview() {
+//    MyFirstAppTheme {
+////        CounterApp()
+//    }
+//}
