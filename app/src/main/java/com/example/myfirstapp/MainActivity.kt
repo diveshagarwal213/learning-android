@@ -30,10 +30,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val navController = rememberNavController()
             MyFirstAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    FirstScreen(modifier = Modifier.padding(innerPadding))
-                    Myapp(modifier = Modifier.padding(innerPadding))
+                    RecipeApp(navController, modifier = Modifier.padding(innerPadding))
+//                    RecipeScreen(modifier = Modifier.padding(innerPadding))
+//                    Myapp(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
