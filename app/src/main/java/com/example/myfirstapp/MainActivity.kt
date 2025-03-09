@@ -39,14 +39,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 //            val navController = rememberNavController()
-            val viewModel: LocationViewModel = viewModel()
+//            val viewModel: LocationViewModel = viewModel()
             MyFirstAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Myapp(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
-//                    RecipeApp(navController, modifier = Modifier.padding(innerPadding))
-//                    RecipeScreen(modifier = Modifier.padding(innerPadding))
-//                    Myapp(modifier = Modifier.padding(innerPadding))
-                }
+                HandleMainNavigation()
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    Text(text = "Text", modifier = Modifier.padding(innerPadding))
+////                    Myapp(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
+////                    RecipeApp(navController, modifier = Modifier.padding(innerPadding))
+////                    RecipeScreen(modifier = Modifier.padding(innerPadding))
+////                    Myapp(modifier = Modifier.padding(innerPadding))
+//                }
             }
         }
     }
