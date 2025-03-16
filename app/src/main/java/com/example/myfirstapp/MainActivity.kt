@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
 //            val navController = rememberNavController()
 //            val viewModel: LocationViewModel = viewModel()
             MyFirstAppTheme {
-                HandleMainNavigation()
+                HandleMainNavigation() // wishlist app
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    Text(text = "Text", modifier = Modifier.padding(innerPadding))
 ////                    Myapp(viewModel = viewModel, modifier = Modifier.padding(innerPadding))

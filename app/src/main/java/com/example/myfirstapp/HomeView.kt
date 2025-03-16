@@ -80,7 +80,7 @@ fun HomeView(
                         val color by
                         animateColorAsState(
                             when (dismissState.targetValue) {
-                                SwipeToDismissBoxValue.Settled -> Color.LightGray
+                                SwipeToDismissBoxValue.Settled -> Color.Transparent
                                 SwipeToDismissBoxValue.StartToEnd -> Color.Red
                                 SwipeToDismissBoxValue.EndToStart -> Color.Red
                             }
